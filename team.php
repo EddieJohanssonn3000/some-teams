@@ -2,11 +2,12 @@
 require __DIR__ . '/data.php';
 require __DIR__ . '/header.php';
 
+//Hämta info från arrayen i data.php baserat på 'name'
 $teamName = $_GET['name'];
 $team = $teams[$teamName];
-?>
 
-<?php if ($team): ?>
+// if-sats som kontrollerar om laget finns i $teams-arrayen. if=true, visas koden.
+if ($team): ?>
     <h2><?= $teamName ?></h2>
     <p>League: <?= $team['league'] ?></p>
     <p>City: <?= $team['city'] ?></p>
